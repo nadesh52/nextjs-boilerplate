@@ -4,9 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "build": "next build && type nul > out/.nojekyll",
+    "deploy": "npm run build && gh-pages -d out --dotfiles"
   },
   "dependencies": {
     "next": "15.3.2",
